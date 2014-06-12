@@ -1,0 +1,57 @@
+default:
+  - build
+
+dev:
+  - env:dev
+  - clean:dev
+
+  - jshint:source
+  - lesslint
+
+  - copy:dev
+  - symlink:dev
+  - includereplace:dev
+  - preprocess
+  - less:dev
+  - less:bootstrap
+
+  - watch
+
+build:
+  - env:prod
+  - clean:dist
+
+  - jshint:source
+  - lesslint
+
+  - copy:dist
+
+  - includereplace:dist
+  - preprocess
+  - less:dist
+  - symlink:dist
+
+  - useminPrepare
+  - svgmin
+  - htmlmin:dist
+  - concat
+  - cssmin
+  - ngmin
+  - uglify
+  - requirejs
+  - rev
+
+  - usemin
+
+
+test_admin:
+  - karma:admin_unit_watch
+
+test_consumer:
+  - karma:consumer_unit_watch
+
+test_admin_once:
+  - karma:admin_unit_once
+
+test_consumer_once:
+  - karma:consumer_unit_once
