@@ -2,24 +2,6 @@
   "name": "angular-form",
   "version": "0.0.1",
   "dependencies": {
-    "angular": "1.2.16",
-    "angular-animate": "1.2.16",
-    "angular-mocks-unstable": "1.1.5",
-    "angular-resource": "1.0.8",
-    "angular-route": "1.2.16",
-    "angular-sanitize": "1.2.16",
-    "angular-scenario": "1.2.16",
-    "bootstrap": "3.1.1",
-    "jquery": "1.11.0",
-    "normalize.css": "3.0.1",
-    "underscore.string": "2.3.3",
-    "autoNumeric": "1.9.22",
-    "wysihtml5": "0.3.0"
-  },
-  "devDependencies": {
-    "html5shiv": "~3.7.2"
-  },
-  "resolutions": {
     "angular": "1.2.16"
   }
 }
